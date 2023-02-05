@@ -1,0 +1,76 @@
+@use '../styles/variables';
+@use '../styles/mixins';
+
+.navbar {
+    padding: 1.14rem 1.14rem 0 1.14rem;
+
+    &__logo {
+        @include mixins.logo-size
+    }
+
+    &__search {
+
+        display:flex;
+
+        &--avatar {
+            width: 2.86rem;
+            height: 2.86rem;
+            border:none;
+            border-radius:50%;
+            object-fit:cover;
+            background-color: variables.$mercury;
+        }
+
+        &--bar {
+            width:100%;
+        }
+    }
+
+    &__upload {
+        width:100%;
+        background: variables.$brainflix-blue url('../assets/images/upload.svg');
+        background-repeat: no-repeat;
+        background-position: 0.57rem 0.57rem;
+        @include mixins.button
+    }
+
+    &__avatar {
+        display:none;
+    }
+}
+
+@include mixins.tablet {
+    .navbar {
+
+        padding: 1.71rem 1.71rem 0 1.71rem;
+        display:flex;
+        justify-content: space-between;
+    
+        &__search {
+    
+            display:flex;
+    
+            &--avatar {
+                display:none;
+            }
+    
+            &--bar {
+                width:100%;
+            }
+        }
+    
+        &__upload {
+            
+        }
+
+        &__avatar {
+            display:flex;
+            width: 2.86rem;
+            height: 2.86rem;
+            border:none;
+            border-radius:50%;
+            object-fit:cover;
+            background-color: variables.$mercury;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@use './variables';
+
+@mixin tablet {
+    @media (min-width: variables.$tablet-width) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: variables.$desktop-width) {
+        @content;
+    }
+}
+
+@mixin logo-size {
+    max-width:8.57;
+    max-height:1.79rem;
+}
+
+@mixin button {
+    height:2.86rem;
+    background-color: variables.$brainflix-blue;
+    border: none;
+    color:variables.$white;
+    border-radius:0.286rem;
+    font: 'Avenir Next LT Pro Bold';
+
+    @include tablet {
+        width:10.7rem;
+    }
+}

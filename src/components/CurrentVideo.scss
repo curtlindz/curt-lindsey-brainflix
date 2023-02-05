@@ -1,0 +1,18 @@
+@use '../styles/variables';
+@use '../styles/mixins';
+
+.current {
+    &__video {
+        width:100%;
+        height:auto;
+    }
+    &__avatar {
+        width: 2.86rem;
+        height: 2.86rem;
+        border:none;
+        border-radius:50%;
+        object-fit:cover;
+        background-color: variables.$mercury;
+    }
+
+}

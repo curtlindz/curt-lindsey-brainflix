@@ -1,0 +1,15 @@
+@use '../styles/variables';
+@use '../styles/mixins';
+
+.next-videos {
+
+    &__card {
+
+        display:flex;
+
+        &--image {
+            width:25%;
+            height:auto;
+        }
+    }
+}
