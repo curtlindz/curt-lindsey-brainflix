@@ -1,5 +1,7 @@
 @use '../styles/variables';
 @use '../styles/mixins';
+@use '../styles/fonts';
+@use '../styles/general';
 
 .navbar {
     padding: 1.14rem 1.14rem 0 1.14rem;
@@ -11,22 +13,25 @@
     &__search {
 
         display:flex;
+        padding-top: 1.14rem;
 
         &--avatar {
-            width: 2.86rem;
-            height: 2.86rem;
-            border:none;
-            border-radius:50%;
-            object-fit:cover;
-            background-color: variables.$mercury;
+            margin-left: 1.14rem;
+            @include mixins.avatar
         }
 
         &--bar {
             width:100%;
+            background: url('../assets/images/search.svg');
+            background-repeat: no-repeat;
+            background-position: 0.57rem 0.57rem;
+            @include mixins.formfield
         }
     }
 
     &__upload {
+
+        margin: 1.14rem 0;
         width:100%;
         background: variables.$brainflix-blue url('../assets/images/upload.svg');
         background-repeat: no-repeat;
