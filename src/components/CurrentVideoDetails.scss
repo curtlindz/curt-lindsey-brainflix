@@ -1,0 +1,161 @@
+@use '../styles/variables';
+@use '../styles/mixins';
+@use '../styles/fonts';
+@use '../styles/general';
+
+.current {
+
+    &__video {
+        width:100%;
+        height:auto;
+    }
+
+    &__title {
+        padding:1.71rem 1.14rem 0 1.14rem;
+        text-align: left;
+        color:variables.$brainflix-black;
+        @include mixins.font-page-header
+    }
+
+    &__details {
+        padding: 1.14rem 1.14rem 0 1.14rem;
+        display:flex;
+        color:variables.$silver;
+        @include mixins.font-body;
+        &--container{
+            border-top: 0.07rem solid variables.$mercury;
+            border-bottom: 0.07rem solid variables.$mercury;
+            padding:1.14rem 0;
+            width:100%;
+            text-align: left;
+        }
+        &--channel{
+            @include mixins.font-sub-header;
+            color:variables.$brainflix-black;
+            padding-bottom:1.14rem;
+        }
+        &--views,&--likes{
+            display:flex;
+            h5{
+                padding-left:1.14rem;
+            }
+        }
+        &--likes{
+            padding-top:1.14rem;
+        }
+    }
+    &__description{
+        padding: 1.14rem 1.14rem 0 1.14rem;
+        @include mixins.font-body;
+        text-align: left;
+        color:variables.$brainflix-black;
+    }
+    &__comments{
+        padding:  1.14rem 1.14rem 0 1.14rem;
+        text-align: left;
+        @include mixins.font-sub-header;
+        color:variables.$brainflix-black;
+    }
+    &__comment-field {
+        display:flex;
+        padding: 1.14rem 1.14rem 0 1.14rem;
+        &--avatar {
+            width: 2.86rem;
+            height: 2.86rem;
+            border:none;
+            border-radius:50%;
+            object-fit:cover;
+            background-color: variables.$mercury;
+            margin-top:1.5rem;
+        }
+        &--header{
+            @include mixins.font-labels;
+            color: variables.$silver;
+        }
+        &--details{
+            padding-left:1.14rem;
+            width:100%;
+            text-align: left;
+        }
+        &--form{
+            @include mixins.formfield;
+            width:100%;
+            padding: 0.857rem;
+        }
+
+        &--button {
+            margin: 1.14rem 0;
+            width:100%;
+            background: variables.$brainflix-blue url('../assets/images/add_comment.svg');
+            background-repeat: no-repeat;
+            background-position: 0.57rem 0.57rem;
+            @include mixins.button
+        }
+    }
+    
+
+}
+
+@include mixins.tablet {
+    .current {
+
+        &__title {
+            padding:2.57rem 1.71rem 0 1.71rem;
+        }
+
+        &__details {
+
+            padding: 1.71rem 1.71rem 0 1.71rem;
+            :last-child{
+                justify-content: right;
+            }
+            &--container{
+                display:flex;
+                padding-top:0;
+                border-top: none;
+                
+            }
+            &--views{
+                padding-top:0;
+            }
+            &--channel{
+                padding-bottom:0;
+            }
+            &--timestamp{
+                padding-left:1.71rem;
+            }
+            &--likes{
+                padding-left:1.71rem;
+                padding-top:0;
+            }
+        }
+        &__comment-field{
+            padding: 1.71rem;
+            &--container{
+                display:flex;
+            }
+            &--form{
+                padding:1.14rem;
+            }
+            &--button{
+                margin:0 0 0 1.71rem;
+            }
+            &--details{
+                padding-left:1.71rem;
+            }
+        }
+        &__description{
+            padding: 1.71rem 1.71rem 0 1.71em;
+        }
+
+        &__comments {
+            padding:  1.71rem 1.71rem 0 1.71rem;
+        }
+
+
+    }
+}
+
+@include mixins.desktop {
+    
+}

@@ -4,4 +4,25 @@
 
 .next-videos {
     padding: 1.14rem;
+    &__header{
+        @include mixins.font-labels;
+        color:variables.$silver;
+        text-align:left;
+        padding-bottom:1.14rem;
+    }
+}
+
+@include mixins.tablet {
+    .next-videos {
+        padding: 1.71rem;
+        &__header{
+            padding-bottom:1.71rem;
+        }
+    }
+}
+
+@include mixins.desktop {
+    .next-videos {
+        border-left: solid 0.071rem variables.$mercury;
+    }
 }

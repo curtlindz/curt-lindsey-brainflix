@@ -5,7 +5,10 @@
 
 .comment {
     display:flex;
-    padding:1.14rem;
+    padding:1.14rem 0;
+    margin:0 1.14rem;
+    border-top: solid 0.071rem variables.$mercury;
+
     &__avatar {
         @include mixins.avatar;
         min-width: 2.86rem;
@@ -25,9 +28,30 @@
             color:variables.$silver;
         }
         &--comment{
+            padding-top:1.14rem;
             text-align:left;
             @include mixins.font-body;
             color:variables.$brainflix-black;
         }
+    }
+    
+}
+
+@include mixins.tablet {
+    .comment {
+        padding:1.71rem 0;
+        margin:0 1.71rem;
+    
+        &__avatar {
+            min-width: 2.86rem;
+        }
+        &__details{
+            padding-left:1.71rem;
+            
+            &--comment{
+                padding-top:1.71rem;
+            }
+        }
+        
     }
 }

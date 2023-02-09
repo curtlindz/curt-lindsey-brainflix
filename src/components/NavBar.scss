@@ -3,6 +3,9 @@
 @use '../styles/fonts';
 @use '../styles/general';
 
+
+
+
 .navbar {
     padding: 1.14rem 1.14rem 0 1.14rem;
 
@@ -24,8 +27,10 @@
             width:100%;
             background: url('../assets/images/search.svg');
             background-repeat: no-repeat;
-            background-position: 0.57rem 0.57rem;
-            @include mixins.formfield
+            background-position: 0.8rem 0.8rem;
+            @include mixins.formfield;
+            padding-left:2.5rem;
+
         }
     }
 
@@ -47,13 +52,18 @@
 @include mixins.tablet {
     .navbar {
 
-        padding: 1.71rem 1.71rem 0 1.71rem;
+        padding: 1.71rem 1.71rem 1.71rem 1.71rem;
         display:flex;
         justify-content: space-between;
-    
+        
+        &__logo{
+            vertical-align: center;
+        }
+
         &__search {
     
             display:flex;
+            padding-top:0;
     
             &--avatar {
                 display:none;
@@ -61,11 +71,12 @@
     
             &--bar {
                 width:100%;
+                height:2.86rem;
             }
         }
     
         &__upload {
-            
+            margin: 0;
         }
 
         &__avatar {

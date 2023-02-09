@@ -1,18 +1,22 @@
 import { useState } from "react";
-import videos from '../data/video-details.json'
+import videosDetails from '../data/video-details.json'
+import videos from '../data/videos.json'
 
 import VideoList from "./VideoList";
 import CurrentVideo from "./CurrentVideo";
 import CommentList from "./CommentList";
+import CurrentVideoDetails from "./CurrentVideoDetails";
+import './Main.scss';
 
 function Main() {
+    const videoDetailsList = videosDetails;
     const videoList = videos;
 
     const [videoData, setVideoData] = useState(videoList);
-    const [currentVideo, setCurrentVideo] = useState(videoList[0]);
+    const [currentVideo, setCurrentVideo] = useState(videoDetailsList[0]);
   
     const changeVideo = (id) => {
-      const selectedVideo = videoData.find((video) => {
+      const selectedVideo = videoDetailsList.find((video) => {
         return video.id === id;
       });
   
@@ -35,15 +39,24 @@ function Main() {
   
     return (
       <>
-        <CurrentVideo currentVideo={currentVideo}/>
-        <CommentList 
-        comments={commentArray}
-        />
-        <VideoList
-          videoData={videoData}
-          activeVideoId={currentVideo.id}
-          changeActiveVideo={changeVideo}
-        />
+      <CurrentVideo currentVideo={currentVideo}/>
+        <div className="main__desktop">
+        
+          <div className="main__desktop--container">
+            <CurrentVideoDetails currentVideo={currentVideo}/>
+            <CommentList 
+            comments={commentArray}
+            />
+          </div>
+          <div className="main__desktop--container">
+            <VideoList
+            videoData={videoData}
+            activeVideoId={currentVideo.id}
+            changeActiveVideo={changeVideo}
+            />
+          </div>
+        </div>
+        
       </>
     );
   }

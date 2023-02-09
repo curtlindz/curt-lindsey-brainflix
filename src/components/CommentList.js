@@ -1,8 +1,8 @@
-import Comment from "./Comment"
+import Comment from "./Comment";
+import './CommentList.scss';
 
 function CommentList({comments}) {
 
-    console.log(comments);
     return (
         <>
         <section className="comments">

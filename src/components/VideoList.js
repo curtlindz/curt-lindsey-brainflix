@@ -6,6 +6,7 @@ function VideoList({videoData, activeVideoId, changeActiveVideo}) {
     return (
         <>
         <section className="next-videos">
+            <h5 className="next-videos__header">NEXT VIDEOS</h5>
         {videoData
         .filter((video) => {
           return video.id !== activeVideoId;

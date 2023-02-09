@@ -1,0 +1,9 @@
+@use '../styles/variables';
+@use '../styles/mixins';
+@use '../styles/fonts';
+@use '../styles/general';
+
+.comments :last-child {
+        // border-bottom: solid 0.071rem variables.$mercury;
+
+    }

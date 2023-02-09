@@ -27,7 +27,8 @@
     font-family: 'Avenir Next LT Pro Bold';
 
     @include tablet {
-        width:10.7rem;
+        min-width:10.7rem;
+        max-width:10.7rem;
     }
 }
 
@@ -37,9 +38,15 @@
     min-width:17.1rem;
     border-radius:0.286rem;
     border: solid 0.07rem variables.$mercury;
+    font-family: 'Avenir Next LT Pro Regular';
+    box-sizing: border-box;
+
+    :active {
+        border:solid 0.14rem variables.$brainflix-blue;
+    }
 
     @include tablet {
-        min-height:2.86rem;
+        height:2.86rem;
     }
 }
 
@@ -100,4 +107,10 @@
         font-size: 0.857rem;
         line-height: 1.43rem;
     }
+}
+
+@mixin list-thumbnail {
+    width:100%;
+    height:100%;
+    border-radius: 0.286rem;
 }
