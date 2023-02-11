@@ -55,7 +55,11 @@
         padding: 1.71rem 1.71rem 1.71rem 1.71rem;
         display:flex;
         justify-content: space-between;
+        align-items: center;
         
+        &__container {
+            display:flex;
+        }
         &__logo{
             vertical-align: center;
         }
@@ -76,7 +80,7 @@
         }
     
         &__upload {
-            margin: 0;
+            margin: 0 0 0 1.71rem;
         }
 
         &__avatar {
@@ -87,6 +91,13 @@
             border-radius:50%;
             object-fit:cover;
             background-color: variables.$mercury;
+            margin-left:1.71rem;
         }
+    }
+}
+
+@include mixins.desktop {
+    .navbar{
+        margin: 0 4.57rem;
     }
 }

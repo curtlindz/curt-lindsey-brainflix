@@ -3,7 +3,9 @@
 @use '../styles/fonts';
 @use '../styles/general';
 
-.comments :last-child {
-        // border-bottom: solid 0.071rem variables.$mercury;
 
+@include mixins.desktop {
+    .comments {
+        margin-left:4.57rem;
     }
+}

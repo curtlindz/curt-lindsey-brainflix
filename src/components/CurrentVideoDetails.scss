@@ -157,5 +157,14 @@
 }
 
 @include mixins.desktop {
-    
+        .current{
+            margin-left:4.57rem;
+            &__details {
+                padding: 1.71rem 0 0 1.71rem;
+                
+                &--likes{
+                    padding-right:1.71rem;
+                }
+            }
+        }
 }

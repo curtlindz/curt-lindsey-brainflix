@@ -5,6 +5,35 @@ import views from '../assets/images/views.svg';
 
 function CurrentVideoDetails({currentVideo}) {
 
+    function timeSince(timestamp) {
+        const now = Date.now();
+        const elapsedTime = now - timestamp;
+        const second = 1000;
+        const minute = second * 60;
+        const hour = minute * 60;
+        const day = hour * 24;
+        const month = day * 30;
+        const year = day * 365;
+        const years = day * 730;
+
+        if (elapsedTime < second) {
+            return "Just now";
+        } else if (elapsedTime < minute) {
+            return Math.floor(elapsedTime / second) + " seconds ago";
+        } else if (elapsedTime < hour) {
+            return Math.floor(elapsedTime / minute) + " minutes ago";
+        } else if (elapsedTime < day) {
+            return Math.floor(elapsedTime / hour) + " hours ago";
+        } else if (elapsedTime < month) {
+            return Math.floor(elapsedTime / day) + " days ago";
+        } else if (elapsedTime < year) {
+            return Math.floor(elapsedTime / month) + " months ago";
+        } else if (elapsedTime < years) {
+            return Math.floor(elapsedTime / year) + " year ago";
+        } else {
+            return Math.floor(elapsedTime / years) + " years ago";
+        }
+    };
 
 
     return (
@@ -13,7 +42,7 @@ function CurrentVideoDetails({currentVideo}) {
         <div className="current__details">
             <div className="current__details--container">
                 <h3 className="current__details--channel">By {currentVideo.channel}</h3>
-                <h5 className="current__details--timestamp">{new Date(currentVideo.timestamp).toLocaleDateString()}</h5>
+                <h5 className="current__details--timestamp">{timeSince(currentVideo.timestamp)}</h5>
             </div>
             <div className="current__details--container">
                 
