@@ -1,7 +1,9 @@
-import { useState } from "react";
-import videosDetails from '../data/video-details.json'
-import videos from '../data/videos.json'
+import { useState, useEffect } from "react";
+import { BASE_API_URL, API_KEY } from "../const.js";
+import axios from 'axios';
+import { Link, useParams } from "react-router-dom";
 
+import NavBar from "./NavBar";
 import VideoList from "./VideoList";
 import CurrentVideo from "./CurrentVideo";
 import CommentList from "./CommentList";
@@ -9,14 +11,39 @@ import CurrentVideoDetails from "./CurrentVideoDetails";
 import './Main.scss';
 
 function Main() {
-    const videoDetailsList = videosDetails;
-    const videoList = videos;
 
-    const [videoData, setVideoData] = useState(videoList);
-    const [currentVideo, setCurrentVideo] = useState(videoDetailsList[0]);
-  
+    const [videoData, setVideoData] = useState([]);
+    const [currentVideo, setCurrentVideo] = useState(null);
+    const { id } = useParams();
+
+    useEffect(() => {
+        axios
+          .get(`${BASE_API_URL}videos?api_key=${API_KEY}`)
+          .then((response) => {
+              setVideoData(response.data);
+              setCurrentVideo(response.data[0]);
+            })
+            .catch((error) => console.log(error));
+          }, []);
+
+
+
+          useEffect(() => {
+              axios
+                .get(`${BASE_API_URL}videos/${id}?api_key=${API_KEY}`)
+                .then((response) => {
+                  setCurrentVideo(response.data[0]);
+                })
+                .catch((error) => console.log(error));
+              }, []);
+
+
+          console.log(currentVideo);
+          console.log(videoData);
+
+
     const changeVideo = (id) => {
-      const selectedVideo = videoDetailsList.find((video) => {
+      const selectedVideo = videoData.find((video) => {
         return video.id === id;
       });
   
@@ -29,16 +56,22 @@ function Main() {
       setVideoData(newVideoData);
     };
 
-    const commentArray = currentVideo.comments.map(comment => {
-      return {
-          name: comment.name,
-          comment: comment.comment,
-          timestamp: comment.timestamp
-      };
-  });
+  const commentArray = [];
+  // currentVideo.comments.map(comment => {
+  //     return {
+  //         name: comment.name,
+  //         comment: comment.comment,
+  //         timestamp: comment.timestamp
+  //     };
+  // });
   
+  if (currentVideo === null) {
+    return <main>Loading...</main>;
+  }
+
     return (
       <>
+      <NavBar />
       <CurrentVideo currentVideo={currentVideo}/>
         <div className="main__desktop">
         

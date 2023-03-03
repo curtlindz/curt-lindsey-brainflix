@@ -8,7 +8,7 @@
 
 .navbar {
     padding: 1.14rem 1.14rem 0 1.14rem;
-
+    border-bottom: solid 0.071rem variables.$mercury;
     &__logo {
         @include mixins.logo-size
     }
@@ -41,7 +41,7 @@
         background: variables.$brainflix-blue url('../assets/images/upload.svg');
         background-repeat: no-repeat;
         background-position: 0.57rem 0.57rem;
-        @include mixins.button
+        @include mixins.button;
     }
 
     &__avatar {
@@ -98,6 +98,6 @@
 
 @include mixins.desktop {
     .navbar{
-        margin: 0 4.57rem;
+        padding: 1.71rem 4.57rem 1.71rem 4.57rem;
     }
 }
