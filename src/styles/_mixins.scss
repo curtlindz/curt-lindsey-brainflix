@@ -40,6 +40,7 @@
     border: solid 0.07rem variables.$mercury;
     font-family: 'Avenir Next LT Pro Regular';
     box-sizing: border-box;
+    resize: none;
 
     :active {
         border:solid 0.14rem variables.$brainflix-blue;

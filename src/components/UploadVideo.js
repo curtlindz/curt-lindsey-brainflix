@@ -15,9 +15,9 @@ export default function UploadVideo() {
                 <form className="upload__form">
                     <div className="upload__form--inputs">
                         <h5 className="upload__form--header">TITLE YOUR VIDEO</h5>
-                        <textarea className="upload__form--title" defaultValue="Add a title to your video"></textarea>
+                        <textarea className="upload__form--title" placeholder="Add a title to your video"></textarea>
                         <h5 className="upload__form--header">ADD A VIDEO DESCRIPTION</h5>
-                        <textarea className="upload__form--description" defaultValue="Add a description to your video"></textarea>
+                        <textarea className="upload__form--description" placeholder="Add a description to your video"></textarea>
                     </div>
                     <div className="upload__form--buttons">
                         <Link to ={'/'}><button className="upload__form--publish">PUBLISH</button></Link>
