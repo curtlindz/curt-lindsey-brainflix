@@ -1,0 +1,30 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+@use '../../styles/fonts';
+@use '../../styles/general';
+
+.current {
+
+    &__video {
+        width:100%;
+        height:auto;
+    }
+}
+
+@include mixins.tablet {
+    .current {
+        &__video {
+            background-color:variables.$brainflix-darkblack;
+            padding: 0 1.71rem;
+            box-sizing: border-box;
+        }
+    }
+}
+
+@include mixins.desktop {
+    .current {
+        &__video {
+            padding: 0 9.2rem;
+        }
+    }
+}
