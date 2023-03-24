@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "../assets/images/BrainFlix-logo.svg";
-import avatar from "../assets/images/Mohan-muruge.jpg";
-import '../components/NavBar.scss';
+import logo from "../../assets/images/BrainFlix-logo.svg";
+import avatar from "../../assets/images/Mohan-muruge.jpg";
+import '../../components/NavBar/NavBar.scss';
 import { Link } from "react-router-dom";
 
 

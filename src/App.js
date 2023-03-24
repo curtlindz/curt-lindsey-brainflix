@@ -2,9 +2,8 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Main from './components/Main';
+import Main from './components/Main/Main';
 import Upload from "./pages/Upload/Upload";
-import axios from 'axios';
 import { Navigate } from 'react-router-dom';
 
 

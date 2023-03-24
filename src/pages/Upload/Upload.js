@@ -1,5 +1,5 @@
-import NavBar from "../../components/NavBar";
-import UploadVideo from "../../components/UploadVideo";
+import NavBar from "../../components/NavBar/NavBar";
+import UploadVideo from "../../components/UploadVideo/UploadVideo";
 
 function Upload() {
 

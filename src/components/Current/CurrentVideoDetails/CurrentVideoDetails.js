@@ -1,7 +1,7 @@
 import './CurrentVideoDetails.scss';
-import avatar from "../../assets/images/Mohan-muruge.jpg";
-import likes from '../../assets/images/likes.svg';
-import views from '../../assets/images/views.svg';
+import avatar from "../../../assets/images/Mohan-muruge.jpg";
+import likes from '../../../assets/images/likes.svg';
+import views from '../../../assets/images/views.svg';
 
 function CurrentVideoDetails({currentVideo}) {
 

@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import Card from "./VideoSummary"
+import Card from "../VideoSummary/VideoSummary"
 import './VideoList.scss';
-import { BASE_API_URL, API_KEY } from "../../const";
+import { BASE_API_URL } from "../../../const";
 import axios from 'axios';
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function VideoList({activeVideoId}) {
@@ -12,7 +12,7 @@ function VideoList({activeVideoId}) {
 
     useEffect(() => {
         axios
-          .get(`${BASE_API_URL}videos?api_key=${API_KEY}`)
+          .get(`${BASE_API_URL}videos?`)
           .then((response) => {
               setVideoData(response.data);
             })

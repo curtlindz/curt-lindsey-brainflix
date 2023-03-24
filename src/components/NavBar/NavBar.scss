@@ -1,7 +1,7 @@
-@use '../styles/variables';
-@use '../styles/mixins';
-@use '../styles/fonts';
-@use '../styles/general';
+@use '../../styles/variables';
+@use '../../styles/mixins';
+@use '../../styles/fonts';
+@use '../../styles/general';
 
 
 
@@ -25,7 +25,7 @@
 
         &--bar {
             width:100%;
-            background: url('../assets/images/search.svg');
+            background: url('../../assets/images/search.svg');
             background-repeat: no-repeat;
             background-position: 0.8rem 0.8rem;
             @include mixins.formfield;
@@ -38,7 +38,7 @@
 
         margin: 1.14rem 0;
         width:100%;
-        background: variables.$brainflix-blue url('../assets/images/upload.svg');
+        background: variables.$brainflix-blue url('../../assets/images/upload.svg');
         background-repeat: no-repeat;
         background-position: 0.57rem 0.57rem;
         @include mixins.button;

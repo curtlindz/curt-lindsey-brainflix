@@ -1,7 +1,7 @@
-@use '../../styles/variables';
-@use '../../styles/mixins';
-@use '../../styles/fonts';
-@use '../../styles/general';
+@use '../../../styles/variables';
+@use '../../../styles/mixins';
+@use '../../../styles/fonts';
+@use '../../../styles/general';
 
 .current {
 
@@ -86,7 +86,7 @@
         &--button {
             margin: 1.14rem 0;
             width:100%;
-            background: variables.$brainflix-blue url('../../assets/images/add_comment.svg');
+            background: variables.$brainflix-blue url('../../../assets/images/add_comment.svg');
             background-repeat: no-repeat;
             background-position: 0.57rem 0.57rem;
             @include mixins.button

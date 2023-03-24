@@ -1,7 +1,7 @@
-@use '../../styles/variables';
-@use '../../styles/mixins';
-@use '../../styles/fonts';
-@use '../../styles/general';
+@use '../../../styles/variables';
+@use '../../../styles/mixins';
+@use '../../../styles/fonts';
+@use '../../../styles/general';
 
 .comment {
     display:flex;
@@ -11,6 +11,7 @@
     &__avatar {
         @include mixins.avatar;
         min-width: 2.86rem;
+        font-size:0;
         
     }
     &__details{

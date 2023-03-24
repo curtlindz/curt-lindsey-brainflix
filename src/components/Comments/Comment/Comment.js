@@ -34,7 +34,7 @@ export default function Comment({name, timestamp, comment}) {
 
     return (
     <div className="comment">
-        <img className="comment__avatar"/>
+        <img className="comment__avatar" alt="avatar"/>
         <div className="comment__details">
             <div className="comment__details--header">
                 <h3 className="comment__details--name">{name}</h3>

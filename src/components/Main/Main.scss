@@ -3,9 +3,10 @@
 @use '../../styles/fonts';
 @use '../../styles/general';
 
-
 @include mixins.desktop {
-    .comments {
-        margin-left:4.57rem;
+    .main{
+        &__desktop{
+            display:flex;
+        }
     }
 }

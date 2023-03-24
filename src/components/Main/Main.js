@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
-import { BASE_API_URL, API_KEY } from "../const.js";
+import { BASE_API_URL } from "../../const";
 import axios from 'axios';
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-import NavBar from "./NavBar";
-import VideoList from "./Videos/VideoList.js";
-import CurrentVideo from "./Current/CurrentVideo";
-import CommentList from "./Comments/CommentList";
-import CurrentVideoDetails from "./Current/CurrentVideoDetails";
+import NavBar from "../NavBar/NavBar";
+import VideoList from "../Videos/VideoList/VideoList.js";
+import CurrentVideo from "../Current/CurrentVideo/CurrentVideo";
+import CommentList from "../Comments/CommentList/CommentList";
+import CurrentVideoDetails from "../Current/CurrentVideoDetails/CurrentVideoDetails";
 import './Main.scss';
 
 function Main() {
@@ -17,7 +17,7 @@ function Main() {
 
     useEffect(() => {
       axios
-        .get(`${BASE_API_URL}videos/${id}?api_key=${API_KEY}`)
+        .get(`${BASE_API_URL}videos/${id}?`)
         .then((response) => {
           setCurrentVideo(response.data);
         })
