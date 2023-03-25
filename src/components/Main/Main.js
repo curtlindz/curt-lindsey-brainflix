@@ -35,7 +35,7 @@ function Main() {
       <CurrentVideo currentVideo={currentVideo}/>
         <div className="main__desktop">
         
-          <div className="main__desktop--container">
+          <div className="main__desktop--container main__desktop--left">
             <CurrentVideoDetails currentVideo={currentVideo}/>
             <CommentList 
             comments={currentVideo.comments}

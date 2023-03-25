@@ -66,7 +66,7 @@ function CurrentVideoDetails({currentVideo}) {
                     <h5 className="current__comment-field--header">JOIN THE CONVERSATION</h5>
                     <div className="current__comment-field--container">
                         <textarea className="current__comment-field--form" placeholder="Add a new comment"></textarea>
-                        <button className="current__comment-field--button">COMMENT</button>
+                        <button type ="button" className="current__comment-field--button">COMMENT</button>
                     </div>
                 </div>
             </form>

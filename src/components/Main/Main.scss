@@ -7,6 +7,9 @@
     .main{
         &__desktop{
             display:flex;
+            &--left {
+                width:60%;
+            }
         }
     }
 }
