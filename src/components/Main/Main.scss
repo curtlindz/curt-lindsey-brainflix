@@ -1,0 +1,15 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+@use '../../styles/fonts';
+@use '../../styles/general';
+
+@include mixins.desktop {
+    .main{
+        &__desktop{
+            display:flex;
+            &--left {
+                width:60%;
+            }
+        }
+    }
+}
